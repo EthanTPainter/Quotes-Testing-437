@@ -1,15 +1,21 @@
-package quotes;
+//package quotes;
 
+/* Commentted out file for future use
+ * Saved for reference in the future
+ * Use CTRL-F to search for and remove all '/*' below
+ */
+
+/*
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import javax.servlet.ServletException;
-import javax.servlet.ServletContext;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-
+*/
 
 /**
  * @author Jeff Offutt & Mongkoldech Rajapakdee
@@ -28,6 +34,8 @@ import java.util.ArrayList;
  *    quotes.js -- JS used by the HTML created in quoteserve
  *    quotes.xml -- Data file, read by QuoteSaxParser
  */
+
+/*
 public class quoteserve extends HttpServlet
 {
    private static final String FileURL = "https://cs.gmu.edu/~offutt/classes/642/examples/servlets/quotes";
@@ -115,7 +123,9 @@ protected void doGet (HttpServletRequest request, HttpServletResponse response)
    }
    // Done with updating the search lists
 
-   /* Print HTML response page */
+   */
+
+   /* Print HTML response page
    response.setContentType ("text/html");
    PrintWriter out = response.getWriter ();
    printHeader  (out);
@@ -125,12 +135,16 @@ protected void doGet (HttpServletRequest request, HttpServletResponse response)
    printFooter  (out);
 }
 
+*/
+
 /**
  * Print the header of the HTML page
  * @param out PrintWriter
  * @throws ServletException
  * @throws IOException
 */
+
+/*
 private void printHeader (PrintWriter out) throws ServletException, IOException
 {
    out.println ("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
@@ -144,6 +158,7 @@ private void printHeader (PrintWriter out) throws ServletException, IOException
 
    out.println ("<body onLoad=\"setFocus()\" bgcolor=\"#DDEEDD\">");
 }
+*/
 
 /**
  * Print the body of HTML
@@ -151,6 +166,8 @@ private void printHeader (PrintWriter out) throws ServletException, IOException
  * @throws ServletException
  * @throws IOException
 */
+
+/*
 private void printBody (PrintWriter out)
              throws ServletException, IOException
 {
@@ -218,6 +235,8 @@ private void printBody (PrintWriter out)
  * @throws ServletException
  * @throws IOException
 */
+
+/*
 private void printSearch (PrintWriter out, String searchText, String searchScope)
              throws ServletException, IOException
 {
@@ -258,6 +277,7 @@ private void printSearch (PrintWriter out, String searchText, String searchScope
    }
    out.println ("</td>");
 }
+*/
 
 /**
  * Print the recent searches
@@ -267,6 +287,8 @@ private void printSearch (PrintWriter out, String searchText, String searchScope
  * @throws ServletException
  * @throws IOException
  */
+
+/*
 private void printSearches (PrintWriter out, ArrayList<String> sessionList, ArrayList<String> contextList)
              throws ServletException, IOException
 {
@@ -303,6 +325,7 @@ private void printSearches (PrintWriter out, ArrayList<String> sessionList, Arra
 
    out.println ("</td></tr></table>");
 }
+*/
 
 /**
  * Print the footer of HTML page
@@ -310,6 +333,8 @@ private void printSearches (PrintWriter out, ArrayList<String> sessionList, Arra
  * @throws ServletException
  * @throws IOException
  */
+
+/*
 private void printFooter (PrintWriter out) throws ServletException, IOException
 {
    out.println ("<p style=\"font-size:80%;font-family:monospace; color:#888888\">");
@@ -320,3 +345,5 @@ private void printFooter (PrintWriter out) throws ServletException, IOException
    out.println ("</html>");
 }
 } // end quoteserve class
+
+*/

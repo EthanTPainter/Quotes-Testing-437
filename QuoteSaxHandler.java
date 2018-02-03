@@ -1,4 +1,4 @@
-package quotes;
+//package quotes;
 
 import org.xml.sax.helpers.DefaultHandler;
 import org.xml.sax.*;
@@ -22,75 +22,75 @@ public class QuoteSaxHandler extends DefaultHandler
    private final String QuoteAuthorElem = "author";
    private final String QuoteTextElem   = "quote-text";
 
-public QuoteSaxHandler()
+   public QuoteSaxHandler()
 {
    super();
 }
 
-public QuoteList getQuoteList()
+   public QuoteList getQuoteList()
 {
    return quoteList;
 }
 
-@Override
-public void startDocument ()
-{
-   // System.out.println ("Start document"); // For testing
-}
+   @Override
+   public void startDocument ()
+   {
+      // System.out.println ("Start document"); // For testing
+   }
 
-@Override
-public void endDocument ()
-{
-   // System.out.println ("End document"); // For testing
-}
+   @Override
+   public void endDocument ()
+   {
+      // System.out.println ("End document"); // For testing
+   }
 
-@Override
-public void startElement (String uri, String name, String qName, Attributes atts)
-{
-   if (qName.equalsIgnoreCase (QuoteListElem))
+   @Override
+   public void startElement (String uri, String name, String qName, Attributes atts)
    {
-      currentElement = QuoteListElem;
-   }
-   else if (qName.equalsIgnoreCase(QuoteElem))
-   {
-      currentElement = QuoteElem;
-      quoteTmp = new Quote();
-   }
-   else if (qName.equalsIgnoreCase (QuoteAuthorElem))
-   {
-      currentElement = QuoteAuthorElem;
-   }
-   else if (qName.equalsIgnoreCase (QuoteTextElem))
-   {
-      currentElement = QuoteTextElem;
-   }
-}
-
-@Override
-public void endElement (String uri, String name, String qName)
-{
-   if (qName.equalsIgnoreCase (QuoteElem))
-   {
-      quoteList.setQuote (quoteTmp);
-      quoteTmp = null;
-   }
-}
-
-@Override
-public void characters (char ch[], int start, int length)
-{
-   String value = new String (ch, start, length);
-   if (!value.trim().equals(""))
-   {
-      if (currentElement.equalsIgnoreCase (QuoteTextElem))
+      if (qName.equalsIgnoreCase (QuoteListElem))
       {
-         quoteTmp.setQuoteText (value);
+         currentElement = QuoteListElem;
       }
-      else if (currentElement.equalsIgnoreCase (QuoteAuthorElem))
+      else if (qName.equalsIgnoreCase(QuoteElem))
       {
-         quoteTmp.setAuthor (value);
+         currentElement = QuoteElem;
+         quoteTmp = new Quote();
+      }
+      else if (qName.equalsIgnoreCase (QuoteAuthorElem))
+      {
+         currentElement = QuoteAuthorElem;
+      }
+      else if (qName.equalsIgnoreCase (QuoteTextElem))
+      {
+         currentElement = QuoteTextElem;
       }
    }
-}
+
+   @Override
+   public void endElement (String uri, String name, String qName)
+   {
+      if (qName.equalsIgnoreCase (QuoteElem))
+      {
+         quoteList.setQuote (quoteTmp);
+         quoteTmp = null;
+      }
+   }
+
+   @Override
+   public void characters (char ch[], int start, int length)
+   {
+      String value = new String (ch, start, length);
+      if (!value.trim().equals(""))
+      {
+         if (currentElement.equalsIgnoreCase (QuoteTextElem))
+         {
+            quoteTmp.setQuoteText (value);
+         }
+         else if (currentElement.equalsIgnoreCase (QuoteAuthorElem))
+         {
+            quoteTmp.setAuthor (value);
+         }
+      }
+   }
 
 }

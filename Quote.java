@@ -1,4 +1,4 @@
-package quotes;
+//package quotes;
 
 /**
  * Quote data object.
@@ -12,9 +12,15 @@ public class Quote
    private String author;
    private String quoteText;
 
-   // Default constructor does nothing
-   public Quote ()
+   // Default Constructor (No input)
+   public Quote(){ }
+
+   // Constructor that assigns quote
+   // Assumes author is anonymous
+   public Quote (String author)
    {
+      this.quoteText = author;
+      this.author = "Anonymous";
    }
 
    // Constructor that assigns both strings

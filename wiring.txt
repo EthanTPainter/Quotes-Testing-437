@@ -13,3 +13,4 @@ NOTE: SOMETIMES I CHANGE THE DEPLOYED VERSION OF quotes.xml,
 
 NOTE II: quotes.xml is read into memory and stays resident as long as the servlet instance stays in memory
          (30 minutes after last call).
+
