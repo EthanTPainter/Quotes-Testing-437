@@ -31,8 +31,7 @@ public class QuoteSaxParser
    }
 
    public QuoteList getQuoteList()
-{
-   return handler.getQuoteList();
-}
-
+   {
+      return handler.getQuoteList();
+   }
 }

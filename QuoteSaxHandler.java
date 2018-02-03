@@ -92,5 +92,4 @@ public class QuoteSaxHandler extends DefaultHandler
          }
       }
    }
-
 }
