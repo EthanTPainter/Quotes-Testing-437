@@ -17,9 +17,9 @@ public class Quote
 
    // Constructor that assigns quote
    // Assumes author is anonymous
-   public Quote (String author)
+   public Quote(String quoteText)
    {
-      this.quoteText = author;
+      this.quoteText = quoteText;
       this.author = "Anonymous";
    }
 

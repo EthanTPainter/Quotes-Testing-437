@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e849665-5644-4b7e-80ad-06eeb89610ad" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/QuoteCMD.java" afterPath="$PROJECT_DIR$/QuoteCMD.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/QuoteSaxHandler.java" afterPath="$PROJECT_DIR$/QuoteSaxHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/QuoteSaxParser.java" afterPath="$PROJECT_DIR$/QuoteSaxParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Quotes-Testing-437.iml" afterPath="$PROJECT_DIR$/Quotes-Testing-437.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Quote.java" afterPath="$PROJECT_DIR$/Quote.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Quote.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Quote.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Quote.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+            <state relative-caret-position="420">
+              <caret line="21" column="32" lean-forward="false" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -96,11 +92,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QuoteCMD.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="QuoteCMD.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/QuoteCMD.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="112" column="85" lean-forward="false" selection-start-line="112" selection-start-column="85" selection-end-line="112" selection-end-column="85" />
+            <state relative-caret-position="484">
+              <caret line="118" column="0" lean-forward="true" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
               <folding>
                 <element signature="e#0#5711#0" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -143,13 +139,13 @@
       <list>
         <option value="$PROJECT_DIR$/Quotes-Testing-437.iml" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/Quote.java" />
         <option value="$PROJECT_DIR$/quoteserve.java" />
         <option value="$PROJECT_DIR$/wiring.txt" />
         <option value="$PROJECT_DIR$/QuoteList.java" />
         <option value="$PROJECT_DIR$/QuoteSaxHandler.java" />
         <option value="$PROJECT_DIR$/QuoteSaxParser.java" />
         <option value="$PROJECT_DIR$/QuoteCMD.java" />
+        <option value="$PROJECT_DIR$/Quote.java" />
       </list>
     </option>
   </component>
@@ -769,24 +765,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Quote.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/QuoteCMD.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="112" column="85" lean-forward="false" selection-start-line="112" selection-start-column="85" selection-end-line="112" selection-end-column="85" />
+        <state relative-caret-position="484">
+          <caret line="118" column="0" lean-forward="true" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
           <folding>
             <element signature="e#0#5711#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#820#828#0" expanded="true" />
             <element signature="e#881#889#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Quote.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="21" column="32" lean-forward="false" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
