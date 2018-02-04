@@ -51,6 +51,21 @@ public class QuoteCMD{
                     //Search term(s) in quotes
                     System.out.println("\nEnter term(s) to search for in a quote: ");
                     searchTerm = br.readLine();
+                    //If room in list, update it
+                    if(myLastFiveSearchesCounter < 5)
+                    {
+                        myLastFiveSearches[myLastFiveSearchesCounter] = searchTerm;
+                        myLastFiveSearchesCounter++;
+                    }
+                    //Max Counter Reached
+                    else{
+                        //Remove Earliest indexed term to make room for the new term
+                        for(int i = 0; i < 4; i++)
+                        {
+                            myLastFiveSearches[i] = myLastFiveSearches[i+1];
+                        }
+                        myLastFiveSearches[myLastFiveSearchesCounter-1] = searchTerm;
+                    }
                     //Send input to search method
                     searchList = quoteList.search(searchTerm,1);
                     //Nothing found in search list (quotes)
@@ -72,12 +87,27 @@ public class QuoteCMD{
                     //Search term(s) in authors
                     System.out.println("\nEnter term(s) to search for in an author's name: ");
                     searchTerm = br.readLine();
+                    //If room in list, update it
+                    if(myLastFiveSearchesCounter < 5)
+                    {
+                        myLastFiveSearches[myLastFiveSearchesCounter] = searchTerm;
+                        myLastFiveSearchesCounter++;
+                    }
+                    //Max Counter Reached
+                    else{
+                        //Remove Earliest indexed term to make room for the new term
+                        for(int i = 0; i < 4; i++)
+                        {
+                            myLastFiveSearches[i] = myLastFiveSearches[i+1];
+                        }
+                        myLastFiveSearches[myLastFiveSearchesCounter-1] = searchTerm;
+                    }
                     //Send input to search method
                     searchList = quoteList.search(searchTerm, 0);
                     //Nothing found in search list (authors)
                     if(searchList.getSize() == 0)
                     {
-                        System.out.println("Terms: \"" + searchTerm + "\" not found in current author list");
+                        System.out.println("Term(s): \"" + searchTerm + "\" not found in current author list");
                     }
                     //At least one search term found (authors)
                     else{
@@ -93,12 +123,27 @@ public class QuoteCMD{
                     //Search term(s) in quotes or authors
                     System.out.println("\nEnter term(s) to search for in an author or quote: ");
                     searchTerm = br.readLine();
+                    //If room in list, update it
+                    if(myLastFiveSearchesCounter < 5)
+                    {
+                        myLastFiveSearches[myLastFiveSearchesCounter] = searchTerm;
+                        myLastFiveSearchesCounter++;
+                    }
+                    //Max Counter Reached
+                    else{
+                        //Remove Earliest indexed term to make room for the new term
+                        for(int i = 0; i < 4; i++)
+                        {
+                            myLastFiveSearches[i] = myLastFiveSearches[i+1];
+                        }
+                        myLastFiveSearches[myLastFiveSearchesCounter-1] = searchTerm;
+                    }
                     //Send input to search method
                     searchList = quoteList.search(searchTerm, 2);
                     //Nothing found in search list (quotes or authors)
                     if(searchList.getSize() == 0)
                     {
-                        System.out.println("Terms: \"" + searchTerm + "\" not found in current quote or author lists");
+                        System.out.println("Term(s): \"" + searchTerm + "\" not found in current quote or author lists");
                     }
                     //At least one search term found (quotes or authors)
                     else{
@@ -119,7 +164,11 @@ public class QuoteCMD{
                 case 5:
                     //Print last 5 Search Terms
                     System.out.println("\nPrinting last 5 Search Terms: ");
-
+                    for(int i = 0; i < myLastFiveSearchesCounter; i++)
+                    {
+                        System.out.println(i+1 +") " + myLastFiveSearches[i]);
+                    }
+                    System.out.println();
                     break;
                 default:
                     System.out.println("\nError: menu number not detected");
