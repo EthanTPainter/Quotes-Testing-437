@@ -158,32 +158,12 @@ public class QuoteCMD{
                     }
                     break;
                 case 4:
-                    String newQuoteText;
-                    String newAuthor;
-                    Quote newQuote;
-                    System.out.print("\nPrepare to add Quote");
-                    //Get input for quoteText and author from user
-                    System.out.print("\nQuote: ");
-                    newQuoteText = br.readLine();
-                    System.out.print("Author: ");
-                    newAuthor = br.readLine();
-                    //If quote is empty, return an error message and return to menu
-                    if(newQuoteText.equals("")){
-                        System.out.println("\nError: Quote text provided is empty (No quote provided)\n");
-                        break;
-                    }
-                    //If author is empty, make a author anonymous (refers to Constructor I designed in assignment #2)
-                    if(newAuthor.equals("")){
-                        newQuote = new Quote(newQuoteText);
+                    if (addQuote(quoteList)){
+                        System.out.println("\nSuccessfully Added new Quote!\n");
                     }
                     else{
-                        newQuote = new Quote(newAuthor, newQuoteText);
+                        System.out.println("\nError: Quote text provided is empty (No quote provided)\n");
                     }
-                    //Add quote to the current quote list (temporarily)
-                    //After session closes, quote is lost/removed. Only xml data is saved
-                    //Would have to add to xml data file to make permanent
-                    quoteList.setQuote(newQuote);
-                    System.out.println("Successfully Added new Quote!\n");
                     break;
                 case 5:
                     //Generate a random quote
@@ -206,5 +186,36 @@ public class QuoteCMD{
                     break;
             }
         }
+    }
+
+    public static boolean addQuote(QuoteList list) throws IOException {
+        String newQuoteText;
+        String newAuthor;
+        Quote newQuote;
+        BufferedReader newBR = new BufferedReader(new InputStreamReader(System.in));
+        System.out.print("\nPrepare to add Quote");
+        //Get input for quoteText and author from user
+        System.out.print("\nQuote: ");
+        newQuoteText = newBR.readLine();
+        System.out.print("Author: ");
+        newAuthor = newBR.readLine();
+        //If quote is empty, return an error message and return to menu
+        if(newQuoteText.equals("")){
+            return false;
+        }
+        //If author is empty, make a author anonymous (refers to Constructor I designed in assignment #2)
+        if(newAuthor.equals("")){
+            newQuote = new Quote(newQuoteText);
+        }
+        else{
+            newQuote = new Quote(newAuthor, newQuoteText);
+        }
+        //Add quote to the current quote list (permanent)
+        //After session closes, quote is lost/removed. Only xml data is saved
+        //Would have to add to xml data file to make permanent
+        list.setQuote(newQuote);
+        //Do more
+
+        return true;
     }
 }
