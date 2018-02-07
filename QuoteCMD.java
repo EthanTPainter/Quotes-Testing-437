@@ -47,6 +47,7 @@ public class QuoteCMD{
             switch(loopValue){
                 case 0:
                     //Quit
+                    br.close();
                     System.out.println("\nQuitting...");
                     break;
                 case 1:
