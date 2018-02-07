@@ -166,7 +166,6 @@ public class QuoteCMD{
                     newQuoteText = br.readLine();
                     System.out.print("Author: ");
                     newAuthor = br.readLine();
-
                     //If quote is empty, return an error message and return to menu
                     if(newQuoteText.equals("")){
                         System.out.println("\nError: Quote text provided is empty (No quote provided)\n");
