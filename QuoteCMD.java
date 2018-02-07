@@ -1,4 +1,5 @@
-/* @author Ethan Painter
+/* @author: Ethan Painter
+ * Created Date: 2/1/17
  * quoteCMD created as a command line interface for quotesServe
  * Does not communicate with remote server (stand alone interface)
  * All interactions are recorded and displayed using only client side
