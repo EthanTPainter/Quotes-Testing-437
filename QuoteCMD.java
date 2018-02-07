@@ -6,11 +6,11 @@
  * Does not interact with remote server.
  */
 
+//Any imports
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-//Any imports
 public class QuoteCMD{
 
     //Added "throws IOException" because of Buffered Reader
