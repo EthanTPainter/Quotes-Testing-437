@@ -1,5 +1,5 @@
 # Quotes-Testing-437
-Originally provided as a servlet created to test sample quotes on Dr. Offutt's personal website
+Originally provided as a servlet created to test sample quotes on Dr. Offutt's website (shared with cs.gmu.edu)
 
 Modified to include a command line interface rather than sevlet functionality
 - Commented out quoteserve java file because running locally requires tomcat or Java EE or other software for servlet.jar files.
