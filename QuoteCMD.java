@@ -13,24 +13,32 @@ import java.io.InputStreamReader;
 
 public class QuoteCMD{
 
+    //Variables
+    private String searchTerm;
+    private String[] myLastFiveSearches = {"","","","",""};
+    private int myLastFiveSearchesCounter = 0;
+    private QuoteList searchList;
+    private Quote searchQuote;
+    //BufferedReader for CMD line input
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    //Read XML Files
+    QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:/Users/Ethan/Desktop/GMU/2018 Spring Classes/Quotes-Testing-437/quotes.xml");
+    QuoteList quoteList = quoteSaxParser.getQuoteList();
+
+    //Getter for quoteList
+    public QuoteList getQuoteList() {
+        return quoteList;
+    }
+
     //Added "throws IOException" because of Buffered Reader
     public static void main(String[] args) throws IOException
     {
-        //Variables
+        QuoteCMD runner = new QuoteCMD();
         int loopValue = -1;
-        String searchTerm;
-        QuoteList searchList;
-        Quote searchQuote;
-        String[] myLastFiveSearches = {"","","","",""};
-        int myLastFiveSearchesCounter = 0;
-        QuoteList quoteList;
-        //BufferedReader for CMD line input
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        //Read XML Files
-        QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:/Users/Ethan/Desktop/GMU/2018 Spring Classes/Quotes-Testing-437/quotes.xml");
-        quoteList = quoteSaxParser.getQuoteList();
         while(loopValue != 0)
         {
+            //BufferedReader for CMD line input
+            BufferedReader sample = new BufferedReader(new InputStreamReader(System.in));
             //Search Functionality (Current existing quotes)
             //Search by Quote, Author, or both
             //Show Recent Searches (Just User Searches)
@@ -42,124 +50,28 @@ public class QuoteCMD{
             System.out.println("4) Add quote to current quote list");
             System.out.println("5) Generate a Random Quote");
             System.out.println("6) Print last 5 Search Terms");
-            loopValue = Integer.parseInt(br.readLine());
+            loopValue = Integer.parseInt(sample.readLine());
             //Loop through loop with input
             switch(loopValue){
                 case 0:
                     //Quit
-                    br.close();
+                    sample.close();
                     System.out.println("\nQuitting...");
                     break;
                 case 1:
-                    //Search term(s) in quotes
-                    System.out.println("\nEnter term(s) to search for in a quote: ");
-                    searchTerm = br.readLine();
-                    //If room in list, update it
-                    if(myLastFiveSearchesCounter < 5)
-                    {
-                        myLastFiveSearches[myLastFiveSearchesCounter] = searchTerm;
-                        myLastFiveSearchesCounter++;
-                    }
-                    //Max Counter Reached
-                    else{
-                        //Remove Earliest indexed term to make room for the new term
-                        for(int i = 0; i < 4; i++)
-                        {
-                            myLastFiveSearches[i] = myLastFiveSearches[i+1];
-                        }
-                        myLastFiveSearches[myLastFiveSearchesCounter-1] = searchTerm;
-                    }
-                    //Send input to search method
-                    searchList = quoteList.search(searchTerm,1);
-                    //Nothing found in search list (quotes)
-                    if(searchList.getSize() == 0)
-                    {
-                        System.out.println("\nTerm(s): \"" + searchTerm + "\" not found in current quote list\n");
-                    }
-                    //At least one search term found (quotes)
-                    else{
-                        for(int i = 0; i < searchList.getSize(); i++)
-                        {
-                            searchQuote = searchList.getQuote(i);
-                            System.out.println("Quote:  " + searchQuote.getQuoteText());
-                            System.out.println("Author: " + searchQuote.getAuthor() + "\n");
-                        }
-                    }
+                    //Mode = 1
+                    runner.searchQuotes(runner.getQuoteList(), 1);
                     break;
                 case 2:
-                    //Search term(s) in authors
-                    System.out.println("\nEnter term(s) to search for in an author's name: ");
-                    searchTerm = br.readLine();
-                    //If room in list, update it
-                    if(myLastFiveSearchesCounter < 5)
-                    {
-                        myLastFiveSearches[myLastFiveSearchesCounter] = searchTerm;
-                        myLastFiveSearchesCounter++;
-                    }
-                    //Max Counter Reached
-                    else{
-                        //Remove Earliest indexed term to make room for the new term
-                        for(int i = 0; i < 4; i++)
-                        {
-                            myLastFiveSearches[i] = myLastFiveSearches[i+1];
-                        }
-                        myLastFiveSearches[myLastFiveSearchesCounter-1] = searchTerm;
-                    }
-                    //Send input to search method
-                    searchList = quoteList.search(searchTerm, 0);
-                    //Nothing found in search list (authors)
-                    if(searchList.getSize() == 0)
-                    {
-                        System.out.println("\nTerm(s): \"" + searchTerm + "\" not found in current author list\n");
-                    }
-                    //At least one search term found (authors)
-                    else{
-                        for(int i = 0; i < searchList.getSize(); i++)
-                        {
-                            searchQuote = searchList.getQuote(i);
-                            System.out.println("Quote:  " + searchQuote.getQuoteText());
-                            System.out.println("Author: " + searchQuote.getAuthor() + "\n");
-                        }
-                    }
+                    //Mode = 0
+                    runner.searchQuotes(runner.getQuoteList(), 0);
                     break;
                 case 3:
-                    //Search term(s) in quotes or authors
-                    System.out.println("\nEnter term(s) to search for in an author or quote: ");
-                    searchTerm = br.readLine();
-                    //If room in list, update it
-                    if(myLastFiveSearchesCounter < 5)
-                    {
-                        myLastFiveSearches[myLastFiveSearchesCounter] = searchTerm;
-                        myLastFiveSearchesCounter++;
-                    }
-                    //Max Counter Reached
-                    else{
-                        //Remove Earliest indexed term to make room for the new term
-                        for(int i = 0; i < 4; i++)
-                        {
-                            myLastFiveSearches[i] = myLastFiveSearches[i+1];
-                        }
-                        myLastFiveSearches[myLastFiveSearchesCounter-1] = searchTerm;
-                    }
-                    //Send input to search method
-                    searchList = quoteList.search(searchTerm, 2);
-                    //Nothing found in search list (quotes or authors)
-                    if(searchList.getSize() == 0)
-                    {
-                        System.out.println("\nTerm(s): \"" + searchTerm + "\" not found in current quote or author lists\n");
-                    }
-                    //At least one search term found (quotes or authors)
-                    else{
-                        for(int i = 0; i < searchList.getSize(); i++)
-                        {
-                            searchQuote = searchList.getQuote(i);
-                            System.out.println("Quote:  " + searchQuote.getQuoteText());
-                            System.out.println("Author: " + searchQuote.getAuthor() + "\n");
-                        }
-                    }
+                    //Mode = 2
+                    runner.searchQuotes(runner.getQuoteList(), 2);
                     break;
                 case 4:
-                    if (addQuote(quoteList)){
+                    if (addQuote(runner.getQuoteList())){
                         System.out.println("\nSuccessfully Added new Quote!\n");
                     }
                     else{
@@ -168,23 +80,54 @@ public class QuoteCMD{
                     break;
                 case 5:
                     //Generate a random quote
-                    System.out.println("\nGenerating a random Quote...");
-                    Quote quoteTmp = quoteList.getRandomQuote();
-                    System.out.println("Quote:  " + quoteTmp.getQuoteText() + "\nAuthor: " + quoteTmp.getAuthor() + "\n");
+                    runner.generateRandomQuote();
                     break;
                 case 6:
                     //Print last 5 Search Terms
-                    System.out.println("\nPrinting last 5 Search Terms: ");
-                    for(int i = 0; i < myLastFiveSearchesCounter; i++)
-                    {
-                        System.out.println(i+1 +") " + myLastFiveSearches[i]);
-                    }
-                    System.out.println();
+                    runner.printLastFiveSearchTerms();
                     break;
                 default:
                     System.out.println("\nError: menu number not detected");
                     System.out.println("Please enter another number within 0 to 5\n");
                     break;
+            }
+        }
+    }
+
+    public void searchQuotes(QuoteList list, int mode) throws IOException
+    {
+        //Search term(s) in quotes
+        System.out.println("\nEnter term(s) to search for in a quote: ");
+        searchTerm = br.readLine();
+        //If room in list, update it
+        if(myLastFiveSearchesCounter < 5)
+        {
+            myLastFiveSearches[myLastFiveSearchesCounter] = searchTerm;
+            myLastFiveSearchesCounter++;
+        }
+        //Max Counter Reached
+        else{
+            //Remove Earliest indexed term to make room for the new term
+            for(int i = 0; i < 4; i++)
+            {
+                myLastFiveSearches[i] = myLastFiveSearches[i+1];
+            }
+            myLastFiveSearches[myLastFiveSearchesCounter-1] = searchTerm;
+        }
+        //Send input to search method
+        searchList = quoteList.search(searchTerm, mode);
+        //Nothing found in search list (quotes)
+        if(searchList.getSize() == 0)
+        {
+            System.out.println("\nTerm(s): \"" + searchTerm + "\" not found in current quote list\n");
+        }
+        //At least one search term found (quotes)
+        else{
+            for(int i = 0; i < searchList.getSize(); i++)
+            {
+                searchQuote = searchList.getQuote(i);
+                System.out.println("Quote:  " + searchQuote.getQuoteText());
+                System.out.println("Author: " + searchQuote.getAuthor() + "\n");
             }
         }
     }
@@ -218,5 +161,21 @@ public class QuoteCMD{
         //Do more
 
         return true;
+    }
+
+    public void generateRandomQuote()
+    {
+        System.out.println("\nGenerating a random Quote...");
+        Quote quoteTmp = quoteList.getRandomQuote();
+        System.out.println("Quote:  " + quoteTmp.getQuoteText() + "\nAuthor: " + quoteTmp.getAuthor() + "\n");
+    }
+    public void printLastFiveSearchTerms()
+    {
+        System.out.println("\nPrinting last 5 Search Terms: ");
+        for(int i = 0; i < myLastFiveSearchesCounter; i++)
+        {
+            System.out.println(i+1 +") " + myLastFiveSearches[i]);
+        }
+        System.out.println();
     }
 }
