@@ -38,8 +38,9 @@ public class QuoteCMD{
             System.out.println("1) Search For Existing Quote");
             System.out.println("2) Search For Existing Author");
             System.out.println("3) Search For Either Existing Quote or Author");
-            System.out.println("4) Generate a Random Quote");
-            System.out.println("5) Print last 5 Search Terms");
+            System.out.println("4) Add quote to current quote list");
+            System.out.println("5) Generate a Random Quote");
+            System.out.println("6) Print last 5 Search Terms");
             loopValue = Integer.parseInt(br.readLine());
             //Loop through loop with input
             switch(loopValue){
@@ -71,7 +72,7 @@ public class QuoteCMD{
                     //Nothing found in search list (quotes)
                     if(searchList.getSize() == 0)
                     {
-                        System.out.println("Term(s): \"" + searchTerm + "\" not found in current quote list");
+                        System.out.println("\nTerm(s): \"" + searchTerm + "\" not found in current quote list\n");
                     }
                     //At least one search term found (quotes)
                     else{
@@ -107,7 +108,7 @@ public class QuoteCMD{
                     //Nothing found in search list (authors)
                     if(searchList.getSize() == 0)
                     {
-                        System.out.println("Term(s): \"" + searchTerm + "\" not found in current author list");
+                        System.out.println("\nTerm(s): \"" + searchTerm + "\" not found in current author list\n");
                     }
                     //At least one search term found (authors)
                     else{
@@ -143,7 +144,7 @@ public class QuoteCMD{
                     //Nothing found in search list (quotes or authors)
                     if(searchList.getSize() == 0)
                     {
-                        System.out.println("Term(s): \"" + searchTerm + "\" not found in current quote or author lists");
+                        System.out.println("\nTerm(s): \"" + searchTerm + "\" not found in current quote or author lists\n");
                     }
                     //At least one search term found (quotes or authors)
                     else{
@@ -156,12 +157,41 @@ public class QuoteCMD{
                     }
                     break;
                 case 4:
+                    String newQuoteText;
+                    String newAuthor;
+                    Quote newQuote;
+                    System.out.print("\nPrepare to add Quote");
+                    //Get input for quoteText and author from user
+                    System.out.print("\nQuote: ");
+                    newQuoteText = br.readLine();
+                    System.out.print("Author: ");
+                    newAuthor = br.readLine();
+
+                    //If quote is empty, return an error message and return to menu
+                    if(newQuoteText.equals("")){
+                        System.out.println("\nError: Quote text provided is empty (No quote provided)\n");
+                        break;
+                    }
+                    //If author is empty, make a author anonymous (refers to Constructor I designed in assignment #2)
+                    if(newAuthor.equals("")){
+                        newQuote = new Quote(newQuoteText);
+                    }
+                    else{
+                        newQuote = new Quote(newAuthor, newQuoteText);
+                    }
+                    //Add quote to the current quote list (temporarily)
+                    //After session closes, quote is lost/removed. Only xml data is saved
+                    //Would have to add to xml data file to make permanent
+                    quoteList.setQuote(newQuote);
+                    System.out.println("Successfully Added new Quote!\n");
+                    break;
+                case 5:
                     //Generate a random quote
                     System.out.println("\nGenerating a random Quote...");
                     Quote quoteTmp = quoteList.getRandomQuote();
                     System.out.println("Quote:  " + quoteTmp.getQuoteText() + "\nAuthor: " + quoteTmp.getAuthor() + "\n");
                     break;
-                case 5:
+                case 6:
                     //Print last 5 Search Terms
                     System.out.println("\nPrinting last 5 Search Terms: ");
                     for(int i = 0; i < myLastFiveSearchesCounter; i++)
