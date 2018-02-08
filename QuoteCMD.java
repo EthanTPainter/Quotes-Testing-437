@@ -1,9 +1,10 @@
 /* @author: Ethan Painter
  * Created Date: 2/1/17
+ * Config: Java 1.8
+ *
  * quoteCMD created as a command line interface for quotesServe
  * Does not communicate with remote server (stand alone interface)
  * All interactions are recorded and displayed using only client side
- * Does not interact with remote server.
  */
 
 //Any imports
@@ -22,7 +23,7 @@ public class QuoteCMD{
     //BufferedReader for CMD line input
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     //Read XML Files
-    QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:/Users/Ethan/Desktop/GMU/2018 Spring Classes/Quotes-Testing-437/quotes.xml");
+    QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:\\Users\\EthanPC\\Desktop\\GMU\\Quotes-Testing-437\\quotes.xml");
     QuoteList quoteList = quoteSaxParser.getQuoteList();
 
     //Getter for quoteList
@@ -30,9 +31,15 @@ public class QuoteCMD{
         return quoteList;
     }
 
+    //Closes buffered reader br when quitting
+    public void closeBufferedReader() throws IOException {
+        br.close();
+    }
+
     //Added "throws IOException" because of Buffered Reader
     public static void main(String[] args) throws IOException
     {
+        //Make QuoteCMD runner to use methods included
         QuoteCMD runner = new QuoteCMD();
         int loopValue = -1;
         while(loopValue != 0)
@@ -54,21 +61,22 @@ public class QuoteCMD{
             //Loop through loop with input
             switch(loopValue){
                 case 0:
-                    //Quit
+                    //Quit & Close Buffered Readers
                     sample.close();
+                    runner.closeBufferedReader();
                     System.out.println("\nQuitting...");
                     break;
                 case 1:
                     //Mode = 1
-                    runner.searchQuotes(runner.getQuoteList(), 1);
+                    runner.searchQuotes(1);
                     break;
                 case 2:
                     //Mode = 0
-                    runner.searchQuotes(runner.getQuoteList(), 0);
+                    runner.searchQuotes(0);
                     break;
                 case 3:
                     //Mode = 2
-                    runner.searchQuotes(runner.getQuoteList(), 2);
+                    runner.searchQuotes(2);
                     break;
                 case 4:
                     if (addQuote(runner.getQuoteList())){
@@ -94,7 +102,7 @@ public class QuoteCMD{
         }
     }
 
-    public void searchQuotes(QuoteList list, int mode) throws IOException
+    public void searchQuotes(int mode) throws IOException
     {
         //Search term(s) in quotes
         System.out.println("\nEnter term(s) to search for in a quote: ");
@@ -155,11 +163,10 @@ public class QuoteCMD{
             newQuote = new Quote(newAuthor, newQuoteText);
         }
         //Add quote to the current quote list (permanent)
+        list.setQuote(newQuote);
         //After session closes, quote is lost/removed. Only xml data is saved
         //Would have to add to xml data file to make permanent
-        list.setQuote(newQuote);
-        //Do more
-
+        
         return true;
     }
 
