@@ -48,7 +48,6 @@ public class QuoteCMD{
     //Quote SAParser to Parse XML Files
     QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:\\Users\\EthanPC\\Desktop\\GMU\\Quotes-Testing-437\\quotes.xml");         //DESKTOP
     //QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:\\Users\\EthanPC\\Desktop\\GMU\\Quotes-Testing-437\\quotes.xml");               //LAPTOP
-    //Users\\jedwa\\Documents\\GMU\\2018_spring\\cs437_softwareTesting\\Quotes-Testing-437\\quotes.xml      //JAMES LAPTOP
     QuoteList quoteList = quoteSaxParser.getQuoteList();
 
     //Getter for quoteList
