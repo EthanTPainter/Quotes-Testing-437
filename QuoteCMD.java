@@ -46,8 +46,8 @@ public class QuoteCMD{
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
     //Quote SAParser to Parse XML Files
-    QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:\\Users\\EthanPC\\Desktop\\GMU\\Quotes-Testing-437\\quotes.xml");         //Desktop environment
-    //QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:\\Users\\EthanPC\\Desktop\\GMU\\Quotes-Testing-437\\quotes.xml");               //Laptop environment
+    QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:\\Users\\EthanPC\\Desktop\\GMU\\Quotes-Testing-437\\quotes.xml");         //DESKTOP
+    //QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:\\Users\\EthanPC\\Desktop\\GMU\\Quotes-Testing-437\\quotes.xml");               //LAPTOP
     QuoteList quoteList = quoteSaxParser.getQuoteList();
 
     //Getter for quoteList
@@ -222,7 +222,7 @@ public class QuoteCMD{
             //Set up DOM Parser
             DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
-            Document document = documentBuilder.parse("C:\\Users\\EthanPC\\Desktop\\GMU\\Quotes-Testing-437\\quotes.xml");
+            Document document = documentBuilder.parse("C:\\Users\\EthanPC\\Desktop\\GMU\\Quotes-Testing-437\\quotes.xml");          //DESKTOP
 
             //Get last child node
             Node node = document.getFirstChild(); //quote-list
@@ -255,7 +255,7 @@ public class QuoteCMD{
             //End of Formatting
 
             DOMSource source = new DOMSource(document);
-            StreamResult result = new StreamResult(new File("C:\\Users\\EthanPC\\Desktop\\GMU\\Quotes-Testing-437\\quotes.xml"));
+            StreamResult result = new StreamResult(new File("C:\\Users\\EthanPC\\Desktop\\GMU\\Quotes-Testing-437\\quotes.xml"));       //DESKTOP
 
             transformer.transform(source, result);
         }
