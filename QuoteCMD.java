@@ -39,16 +39,17 @@ public class QuoteCMD{
 
     //Temp Variables (only used to store temp quote text and author)
     //This only occurs when adding quotes to XML
-    String enteredQuoteText;
-    String enteredAuthor;
+    private String enteredQuoteText;
+    private String enteredAuthor;
 
     //BufferedReader for CMD line input
-    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    private BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
     //Quote SAParser to Parse XML Files
-    QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:\\Users\\EthanPC\\Desktop\\GMU\\Quotes-Testing-437\\quotes.xml");         //DESKTOP
-    //QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:\\Users\\EthanPC\\Desktop\\GMU\\Quotes-Testing-437\\quotes.xml");               //LAPTOP
-    QuoteList quoteList = quoteSaxParser.getQuoteList();
+    //private QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:\\Users\\EthanPC\\Desktop\\GMU\\Quotes-Testing-437\\quotes.xml");         //ETHAN DESKTOP
+    QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:\\Users\\Ethan\\Desktop\\GMU\\2018 Spring Classes\\Quotes-Testing-437\\quotes.xml");  //ETHAN LAPTOP
+
+    private QuoteList quoteList = quoteSaxParser.getQuoteList();
 
     //Getter for quoteList
     public QuoteList getQuoteList() {
@@ -129,10 +130,25 @@ public class QuoteCMD{
                     System.out.print("Author: ");
                     newAuthor = newBR.readLine();
                     if (addQuote(runner.getQuoteList(), newQuoteText, newAuthor)){
-                        //If quote entered is a valid quote, change XML to add it
-                        //Makes added quote permanently part of the Quote List
-                        runner.addQuoteToXML(newQuoteText, newAuthor);
-                        System.out.println("\nSuccessfully Added new Quote!\n");
+                        if(runner.getQuoteList().checkForDuplicates(newQuoteText)){
+                            //Add quote to the current quote list
+                            Quote newQuote;
+                            if(newAuthor.equals("")){
+                                newQuote = new Quote(newQuoteText);
+                            }
+                            else{
+                                newQuote = new Quote(newQuoteText, newAuthor);
+                            }
+                            runner.getQuoteList().setQuote(newQuote);
+                            //If quote entered is a valid quote and not a duplicate
+                            //Change XML to add new quote
+                            //Makes added quote permanently part of the Quote List / XML file
+                            runner.addQuoteToXML(newQuoteText, newAuthor);
+                            System.out.println("\nSuccessfully Added new Quote!\n");
+                        }
+                        else{
+                            System.out.println("Error: Quote text already added to list");
+                        }
                     }
                     else{
                         System.out.println("\nError: Quote text provided is empty (No quote provided)\n");
@@ -208,8 +224,6 @@ public class QuoteCMD{
         else{
             newQuote = new Quote(author, quoteText);
         }
-        //Add quote to the current quote list
-        list.setQuote(newQuote);
         return true;
     }
 
@@ -222,7 +236,9 @@ public class QuoteCMD{
             //Set up DOM Parser
             DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
-            Document document = documentBuilder.parse("C:\\Users\\EthanPC\\Desktop\\GMU\\Quotes-Testing-437\\quotes.xml");          //DESKTOP
+            //Document document = documentBuilder.parse("C:\\Users\\EthanPC\\Desktop\\GMU\\Quotes-Testing-437\\quotes.xml");                     //ETHAN DESKTOP
+            Document document = documentBuilder.parse("C:\\Users\\Ethan\\Desktop\\GMU\\2018 Spring Classes\\Quotes-Testing-437\\quotes.xml");   // ETHAN LAPTOP
+
 
             //Get last child node
             Node node = document.getFirstChild(); //quote-list
@@ -255,7 +271,9 @@ public class QuoteCMD{
             //End of Formatting
 
             DOMSource source = new DOMSource(document);
-            StreamResult result = new StreamResult(new File("C:\\Users\\EthanPC\\Desktop\\GMU\\Quotes-Testing-437\\quotes.xml"));       //DESKTOP
+            //StreamResult result = new StreamResult(new File("C:\\Users\\EthanPC\\Desktop\\GMU\\Quotes-Testing-437\\quotes.xml"));         //ETHAN DESKTOP
+            StreamResult result = new StreamResult(new File("C:\\Users\\Ethan\\Desktop\\GMU\\2018 Spring Classes\\Quotes-Testing-437\\quotes.xml"));           //ETHAN LAPTOP
+
 
             transformer.transform(source, result);
         }

@@ -78,8 +78,31 @@ public class QuoteList
       return returnQuote;
    }
 
+   /*
+    * Return whether or not a provided string is found in current QuoteList
+    * Used to verify to new quotes are already added
+    * @param String quote-text for quoteText of possible new string to add
+    * @return true if string param is found in quote list
+    */
+   public boolean checkForDuplicates (String quoteText)
+   {
+      Quote quote;
+      for (int i = 0; i < quoteArray.size(); i++)
+      {
+         quote = quoteArray.get(i);
+         if (quote.getQuoteText().equals(quoteText)) {  // Found a matching quote, save it
+            // System.out.println ("Matched Text ")
+            return false;
+         }
+         else{
+            //Do Nothing for now
+         }
+      }
+      return true;
+   }
+
    /**
-    * Retuen a random quote object from the list.
+    * Return a random quote object from the list.
     * @return a random Quote
     */
    public Quote getRandomQuote ()
