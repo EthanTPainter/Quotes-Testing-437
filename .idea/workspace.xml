@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e849665-5644-4b7e-80ad-06eeb89610ad" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/QuoteCMD.class" afterPath="$PROJECT_DIR$/QuoteCMD.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/QuoteCMD.java" afterPath="$PROJECT_DIR$/QuoteCMD.java" />
     </list>
@@ -20,14 +18,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="QuoteCMD.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="QuoteCMD.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/QuoteCMD.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2822">
-              <caret line="168" column="8" lean-forward="true" selection-start-line="168" selection-start-column="8" selection-end-line="168" selection-end-column="8" />
+            <state relative-caret-position="1048">
+              <caret line="178" column="0" lean-forward="false" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
               <folding>
-                <element signature="e#0#7142#0" expanded="true" />
                 <element signature="imports" expanded="true" />
+                <element signature="e#1014#1015#0" expanded="true" />
+                <element signature="e#1046#1047#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -36,18 +35,18 @@
       <file leaf-file-name="QuoteSaxHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/QuoteSaxHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
+            <state relative-caret-position="306">
               <caret line="19" column="55" lean-forward="false" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QuoteSaxParser.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="QuoteSaxParser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/QuoteSaxParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="6" column="3" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+            <state relative-caret-position="476">
+              <caret line="30" column="4" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -99,10 +98,10 @@
         <option value="$PROJECT_DIR$/wiring.txt" />
         <option value="$PROJECT_DIR$/QuoteList.java" />
         <option value="$PROJECT_DIR$/QuoteSaxHandler.java" />
-        <option value="$PROJECT_DIR$/QuoteSaxParser.java" />
         <option value="$PROJECT_DIR$/Quote.java" />
         <option value="$PROJECT_DIR$/quotes.xml" />
         <option value="$PROJECT_DIR$/QuoteCMD.java" />
+        <option value="$PROJECT_DIR$/QuoteSaxParser.java" />
       </list>
     </option>
   </component>
@@ -132,7 +131,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="AndroidView" />
@@ -147,6 +145,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -375,9 +374,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -466,9 +463,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -537,9 +532,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -598,9 +591,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1491">
           <caret line="78" column="12" lean-forward="false" selection-start-line="78" selection-start-column="12" selection-end-line="78" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -710,6 +701,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/QuoteSaxHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" column="55" lean-forward="false" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/quotes.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -718,30 +717,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/QuoteCMD.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2822">
-          <caret line="168" column="8" lean-forward="true" selection-start-line="168" selection-start-column="8" selection-end-line="168" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#7142#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/QuoteSaxHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="19" column="55" lean-forward="false" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/QuoteSaxParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="3" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        <state relative-caret-position="476">
+          <caret line="30" column="4" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QuoteCMD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1048">
+          <caret line="178" column="0" lean-forward="false" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1014#1015#0" expanded="true" />
+            <element signature="e#1046#1047#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

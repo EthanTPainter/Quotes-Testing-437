@@ -176,6 +176,7 @@ public class QuoteCMD{
         Quote quoteTmp = quoteList.getRandomQuote();
         System.out.println("Quote:  " + quoteTmp.getQuoteText() + "\nAuthor: " + quoteTmp.getAuthor() + "\n");
     }
+
     public void printLastFiveSearchTerms()
     {
         System.out.println("\nPrinting last 5 Search Terms: ");
