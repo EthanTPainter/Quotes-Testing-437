@@ -46,8 +46,8 @@ public class QuoteCMD{
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
     //Quote SAParser to Parse XML Files
-    QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:\\Users\\EthanPC\\Desktop\\GMU\\Quotes-Testing-437\\quotes.xml");         //DESKTOP
-    //QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:\\Users\\EthanPC\\Desktop\\GMU\\Quotes-Testing-437\\quotes.xml");               //LAPTOP
+    QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:\\Users\\jedwa\\Documents\\GMU\\2018_spring\\cs437_softwareTesting\\Quotes-Testing-437\\quotes.xml");         //DESKTOP
+    //QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:\\Users\\jedwa\\Documents\\GMU\\2018_spring\\cs437_softwareTesting\\Quotes-Testing-437\\quotes.xml");               //LAPTOP
     //Users\\jedwa\\Documents\\GMU\\2018_spring\\cs437_softwareTesting\\Quotes-Testing-437\\quotes.xml      //JAMES LAPTOP
     QuoteList quoteList = quoteSaxParser.getQuoteList();
 
@@ -256,7 +256,7 @@ public class QuoteCMD{
             //End of Formatting
 
             DOMSource source = new DOMSource(document);
-            StreamResult result = new StreamResult(new File("C:\\Users\\EthanPC\\Desktop\\GMU\\Quotes-Testing-437\\quotes.xml"));       //DESKTOP
+            StreamResult result = new StreamResult(new File("C:\\Users\\jedwa\\Documents\\GMU\\2018_spring\\cs437_softwareTesting\\Quotes-Testing-437\\quotes.xml"));       //DESKTOP
 
             transformer.transform(source, result);
         }
