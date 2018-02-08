@@ -225,7 +225,7 @@ public class QuoteCMD{
             Document document = documentBuilder.parse("C:\\Users\\EthanPC\\Desktop\\GMU\\Quotes-Testing-437\\quotes.xml");
 
             //Get last child node
-            Node node = document.getLastChild(); //quote-list
+            Node node = document.getFirstChild(); //quote-list
 
             //Add New Quote Element to quote XML
             Element quote = document.createElement("quote");
@@ -248,8 +248,10 @@ public class QuoteCMD{
             Transformer transformer = transformerFactory.newTransformer();
 
             //Add output properties to Transformer to Reformat XML
-            //Normally the XML would be added in a straight line. These output properties will make it follow the format
+            //Normally the XML would be added together in a straight line. These output properties will modify the format
+            //The Formatting isn't perfect, but most IDEs or tools provide plugins to automatically reformat code
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+            transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
             //End of Formatting
 
             DOMSource source = new DOMSource(document);
