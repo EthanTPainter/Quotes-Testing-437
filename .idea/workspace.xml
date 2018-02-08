@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e849665-5644-4b7e-80ad-06eeb89610ad" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/QuoteCMD.class" afterPath="$PROJECT_DIR$/QuoteCMD.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/QuoteCMD.java" afterPath="$PROJECT_DIR$/QuoteCMD.java" />
     </list>
@@ -18,34 +20,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Quote.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Quote.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="22" column="32" lean-forward="false" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="quoteserve.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/quoteserve.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1470">
-              <caret line="70" column="38" lean-forward="false" selection-start-line="70" selection-start-column="38" selection-end-line="70" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QuoteCMD.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="QuoteCMD.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/QuoteCMD.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+            <state relative-caret-position="2822">
+              <caret line="168" column="8" lean-forward="true" selection-start-line="168" selection-start-column="8" selection-end-line="168" selection-end-column="8" />
               <folding>
+                <element signature="e#0#7142#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QuoteSaxHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/QuoteSaxHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="21">
+              <caret line="19" column="55" lean-forward="false" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QuoteSaxParser.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/QuoteSaxParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="6" column="3" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -53,21 +56,9 @@
       <file leaf-file-name="quotes.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/quotes.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="665">
-              <caret line="37" column="11" lean-forward="true" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
+            <state relative-caret-position="34">
+              <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QuoteList.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/QuoteList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="19" column="34" lean-forward="false" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -110,6 +101,7 @@
         <option value="$PROJECT_DIR$/QuoteSaxHandler.java" />
         <option value="$PROJECT_DIR$/QuoteSaxParser.java" />
         <option value="$PROJECT_DIR$/Quote.java" />
+        <option value="$PROJECT_DIR$/quotes.xml" />
         <option value="$PROJECT_DIR$/QuoteCMD.java" />
       </list>
     </option>
@@ -120,7 +112,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="952" />
     <option name="width" value="976" />
     <option name="height" value="1038" />
@@ -140,8 +132,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -153,12 +147,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -283,6 +275,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="0e849665-5644-4b7e-80ad-06eeb89610ad" name="Default" comment="" />
@@ -294,7 +289,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="952" y="0" width="976" height="1038" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -309,7 +304,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46555555" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11510417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4588889" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -689,37 +684,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/QuoteSaxParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="6" column="3" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/QuoteSaxHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="19" column="55" lean-forward="false" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/QuoteList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="34" lean-forward="false" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/quoteserve.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1470">
+        <state relative-caret-position="861">
           <caret line="70" column="38" lean-forward="false" selection-start-line="70" selection-start-column="38" selection-end-line="70" selection-end-column="38" />
           <folding />
         </state>
@@ -727,27 +694,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Quote.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
+        <state relative-caret-position="374">
           <caret line="22" column="32" lean-forward="false" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/QuoteList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="19" column="34" lean-forward="false" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/quotes.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="37" column="11" lean-forward="true" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
+        <state relative-caret-position="34">
+          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/QuoteCMD.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+        <state relative-caret-position="2822">
+          <caret line="168" column="8" lean-forward="true" selection-start-line="168" selection-start-column="8" selection-end-line="168" selection-end-column="8" />
           <folding>
+            <element signature="e#0#7142#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QuoteSaxHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="19" column="55" lean-forward="false" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QuoteSaxParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="3" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -780,7 +774,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Python interpreter library</last-edited>
+          <last-edited>Python 3.6.4 (C:\Users\EthanPC\AppData\Local\Programs\Python\Python36\python.exe) (1) interpreter library</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -792,7 +786,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>Python</last-edited>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -809,6 +803,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
