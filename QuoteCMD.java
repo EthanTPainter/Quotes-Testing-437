@@ -46,10 +46,10 @@ public class QuoteCMD{
     private BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
     //Quote SAParser to Parse XML Files
-    QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:\\Users\\jedwa\\Documents\\GMU\\2018_spring\\cs437_softwareTesting\\Quotes-Testing-437\\quotes.xml");    //laptop
     QuoteList quoteList = quoteSaxParser.getQuoteList();
     //private QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:\\Users\\EthanPC\\Desktop\\GMU\\Quotes-Testing-437\\quotes.xml");         //ETHAN DESKTOP
-    QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:\\Users\\Ethan\\Desktop\\GMU\\2018 Spring Classes\\Quotes-Testing-437\\quotes.xml");  //ETHAN LAPTOP
+    //private QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:\\Users\\jedwa\\Documents\\GMU\\2018_spring\\cs437_softwareTesting\\Quotes-Testing-437\\quotes.xml");    //JAMES LAPTOP
+    private QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:\\Users\\Ethan\\Desktop\\GMU\\2018 Spring Classes\\Quotes-Testing-437\\quotes.xml");  //ETHAN LAPTOP
 
     private QuoteList quoteList = quoteSaxParser.getQuoteList();
 
@@ -238,10 +238,9 @@ public class QuoteCMD{
             //Set up DOM Parser
             DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
-            Document document = documentBuilder.parse("C:\\Users\\jedwa\\Documents\\GMU\\2018_spring\\cs437_softwareTesting\\Quotes-Testing-437\\quotes.xml");          //DESKTOP
+            //Document document = documentBuilder.parse("C:\\Users\\jedwa\\Documents\\GMU\\2018_spring\\cs437_softwareTesting\\Quotes-Testing-437\\quotes.xml");  // JAMES LAPTOP
             //Document document = documentBuilder.parse("C:\\Users\\EthanPC\\Desktop\\GMU\\Quotes-Testing-437\\quotes.xml");                     //ETHAN DESKTOP
             Document document = documentBuilder.parse("C:\\Users\\Ethan\\Desktop\\GMU\\2018 Spring Classes\\Quotes-Testing-437\\quotes.xml");   // ETHAN LAPTOP
-
 
             //Get last child node
             Node node = document.getFirstChild(); //quote-list
@@ -276,8 +275,7 @@ public class QuoteCMD{
             DOMSource source = new DOMSource(document);
             //StreamResult result = new StreamResult(new File("C:\\Users\\EthanPC\\Desktop\\GMU\\Quotes-Testing-437\\quotes.xml"));         //ETHAN DESKTOP
             StreamResult result = new StreamResult(new File("C:\\Users\\Ethan\\Desktop\\GMU\\2018 Spring Classes\\Quotes-Testing-437\\quotes.xml"));           //ETHAN LAPTOP
-
-            StreamResult result = new StreamResult(new File("C:\\Users\\jedwa\\Documents\\GMU\\2018_spring\\cs437_softwareTesting\\Quotes-Testing-437\\quotes.xml"));       //DESKTOP
+            //StreamResult result = new StreamResult(new File("C:\\Users\\jedwa\\Documents\\GMU\\2018_spring\\cs437_softwareTesting\\Quotes-Testing-437\\quotes.xml"));       //JAMES LAPTOP
 
             transformer.transform(source, result);
         }
