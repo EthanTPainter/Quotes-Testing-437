@@ -8,7 +8,23 @@
  */
 
 //Any imports
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.xml.sax.SAXException;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
@@ -20,10 +36,18 @@ public class QuoteCMD{
     private int myLastFiveSearchesCounter = 0;
     private QuoteList searchList;
     private Quote searchQuote;
+
+    //Temp Variables (only used to store temp quote text and author)
+    //This only occurs when adding quotes to XML
+    String enteredQuoteText;
+    String enteredAuthor;
+
     //BufferedReader for CMD line input
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    //Read XML Files
-    QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:\\Users\\EthanPC\\Desktop\\GMU\\Quotes-Testing-437\\quotes.xml");
+
+    //Quote SAParser to Parse XML Files
+    QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:\\Users\\EthanPC\\Desktop\\GMU\\Quotes-Testing-437\\quotes.xml");         //Desktop environment
+    //QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:\\Users\\EthanPC\\Desktop\\GMU\\Quotes-Testing-437\\quotes.xml");               //Laptop environment
     QuoteList quoteList = quoteSaxParser.getQuoteList();
 
     //Getter for quoteList
@@ -35,6 +59,22 @@ public class QuoteCMD{
     public void closeBufferedReader() throws IOException {
         br.close();
     }
+
+    //Getters and Setters for Entered Quote Text and Author
+    //Again, only relevant to use during changing XML (adding quotes)
+    public String getEnteredQuoteText(){
+        return enteredQuoteText;
+    }
+    public String getEnteredAuthor() {
+        return enteredAuthor;
+    }
+    public void setQuoteText(String qt){
+        enteredQuoteText = qt;
+    }
+    public void setAuthor(String a){
+        enteredAuthor = a;
+    }
+
 
     //Added "throws IOException" because of Buffered Reader
     public static void main(String[] args) throws IOException
@@ -79,7 +119,19 @@ public class QuoteCMD{
                     runner.searchQuotes(2);
                     break;
                 case 4:
-                    if (addQuote(runner.getQuoteList())){
+                    String newQuoteText;
+                    String newAuthor;
+                    BufferedReader newBR = new BufferedReader(new InputStreamReader(System.in));
+                    System.out.print("\nPrepare to add Quote");
+                    //Get input for quoteText and author from user
+                    System.out.print("\nQuote: ");
+                    newQuoteText = newBR.readLine();
+                    System.out.print("Author: ");
+                    newAuthor = newBR.readLine();
+                    if (addQuote(runner.getQuoteList(), newQuoteText, newAuthor)){
+                        //If quote entered is a valid quote, change XML to add it
+                        //Makes added quote permanently part of the Quote List
+                        runner.addQuoteToXML(newQuoteText, newAuthor);
                         System.out.println("\nSuccessfully Added new Quote!\n");
                     }
                     else{
@@ -102,6 +154,7 @@ public class QuoteCMD{
         }
     }
 
+    //Used to search quote texts, authors, or both depending on passed in mode
     public void searchQuotes(int mode) throws IOException
     {
         //Search term(s) in quotes
@@ -140,36 +193,76 @@ public class QuoteCMD{
         }
     }
 
-    public static boolean addQuote(QuoteList list) throws IOException {
-        String newQuoteText;
-        String newAuthor;
+    //Called whenever to add quotes to the QuoteList
+    //DOES NOT ADD THE QUOTE TO THE XML FILE. THIS IS DONE SEPARATELY
+    public static boolean addQuote(QuoteList list, String quoteText, String author) throws IOException {
         Quote newQuote;
-        BufferedReader newBR = new BufferedReader(new InputStreamReader(System.in));
-        System.out.print("\nPrepare to add Quote");
-        //Get input for quoteText and author from user
-        System.out.print("\nQuote: ");
-        newQuoteText = newBR.readLine();
-        System.out.print("Author: ");
-        newAuthor = newBR.readLine();
         //If quote is empty, return an error message and return to menu
-        if(newQuoteText.equals("")){
+        if(quoteText.equals("")){
             return false;
         }
         //If author is empty, make a author anonymous (refers to Constructor I designed in assignment #2)
-        if(newAuthor.equals("")){
-            newQuote = new Quote(newQuoteText);
+        if(author.equals("")){
+            newQuote = new Quote(quoteText);
         }
         else{
-            newQuote = new Quote(newAuthor, newQuoteText);
+            newQuote = new Quote(author, quoteText);
         }
-        //Add quote to the current quote list (permanent)
+        //Add quote to the current quote list
         list.setQuote(newQuote);
-        //After session closes, quote is lost/removed. Only xml data is saved
-        //Would have to add to xml data file to make permanent
-        
         return true;
     }
 
+    //Function to add Quote to XML
+    public void addQuoteToXML(String quoteText, String author)
+    {
+        //SAX Parser can't add/modify XML, so instead rely on DOM Parser
+        //Create DOM Parser to append XML to current document
+        try{
+            //Set up DOM Parser
+            DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
+            Document document = documentBuilder.parse("C:\\Users\\EthanPC\\Desktop\\GMU\\Quotes-Testing-437\\quotes.xml");
+
+            //Get last child node
+            Node node = document.getLastChild(); //quote-list
+
+            //Add New Quote Element to quote XML
+            Element quote = document.createElement("quote");
+            node.appendChild(quote);
+
+            //Make Quote Text Element
+            Element nodeQuoteText = document.createElement("quote-text");
+            nodeQuoteText.appendChild(document.createTextNode(quoteText));
+            //Append to quote node
+            quote.appendChild(nodeQuoteText);
+
+            //Make Author Element
+            Element nodeAuthor = document.createElement("author");
+            nodeAuthor.appendChild(document.createTextNode(author));
+            //Append to quote node
+            quote.appendChild(nodeAuthor);
+
+            //Transform the file to append the new quote
+            TransformerFactory transformerFactory = TransformerFactory.newInstance();
+            Transformer transformer = transformerFactory.newTransformer();
+
+            //Add output properties to Transformer to Reformat XML
+            //Normally the XML would be added in a straight line. These output properties will make it follow the format
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+            //End of Formatting
+
+            DOMSource source = new DOMSource(document);
+            StreamResult result = new StreamResult(new File("C:\\Users\\EthanPC\\Desktop\\GMU\\Quotes-Testing-437\\quotes.xml"));
+
+            transformer.transform(source, result);
+        }
+        catch(ParserConfigurationException | IOException | SAXException | TransformerException e){
+            e.printStackTrace();
+        }
+    }
+
+    //Generates a random quote from Quote List
     public void generateRandomQuote()
     {
         System.out.println("\nGenerating a random Quote...");
@@ -177,6 +270,7 @@ public class QuoteCMD{
         System.out.println("Quote:  " + quoteTmp.getQuoteText() + "\nAuthor: " + quoteTmp.getAuthor() + "\n");
     }
 
+    //Prints last five search terms to cmd line interface
     public void printLastFiveSearchTerms()
     {
         System.out.println("\nPrinting last 5 Search Terms: ");
