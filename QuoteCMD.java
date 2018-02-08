@@ -46,9 +46,7 @@ public class QuoteCMD{
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
     //Quote SAParser to Parse XML Files
-    QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:\\Users\\jedwa\\Documents\\GMU\\2018_spring\\cs437_softwareTesting\\Quotes-Testing-437\\quotes.xml");         //DESKTOP
-    //QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:\\Users\\jedwa\\Documents\\GMU\\2018_spring\\cs437_softwareTesting\\Quotes-Testing-437\\quotes.xml");               //LAPTOP
-    //Users\\jedwa\\Documents\\GMU\\2018_spring\\cs437_softwareTesting\\Quotes-Testing-437\\quotes.xml      //JAMES LAPTOP
+    QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:\\Users\\jedwa\\Documents\\GMU\\2018_spring\\cs437_softwareTesting\\Quotes-Testing-437\\quotes.xml");    //laptop
     QuoteList quoteList = quoteSaxParser.getQuoteList();
 
     //Getter for quoteList
