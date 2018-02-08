@@ -137,7 +137,7 @@ public class QuoteCMD{
                                 newQuote = new Quote(newQuoteText);
                             }
                             else{
-                                newQuote = new Quote(newQuoteText, newAuthor);
+                                newQuote = new Quote(newAuthor, newQuoteText);
                             }
                             runner.getQuoteList().setQuote(newQuote);
                             //If quote entered is a valid quote and not a duplicate
