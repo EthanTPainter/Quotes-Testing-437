@@ -45,12 +45,11 @@ public class QuoteCMD{
     //BufferedReader for CMD line input
     private BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-    //Quote SAParser to Parse XML Files
-    QuoteList quoteList = quoteSaxParser.getQuoteList();
+    //Quote SAXParser to Parse XML Files
     //private QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:\\Users\\EthanPC\\Desktop\\GMU\\Quotes-Testing-437\\quotes.xml");         //ETHAN DESKTOP
     //private QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:\\Users\\jedwa\\Documents\\GMU\\2018_spring\\cs437_softwareTesting\\Quotes-Testing-437\\quotes.xml");    //JAMES LAPTOP
     private QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:\\Users\\Ethan\\Desktop\\GMU\\2018 Spring Classes\\Quotes-Testing-437\\quotes.xml");  //ETHAN LAPTOP
-
+    //Quote SAParser to Parse XML Files
     private QuoteList quoteList = quoteSaxParser.getQuoteList();
 
     //Getter for quoteList
