@@ -38,7 +38,4 @@ public class searchByKeyword {
         assertTrue(keywordResult.getQuote(0).getQuoteText().contains(keyword));
         assertTrue(keywordResult.getQuote(1).getQuoteText().contains(keyword));
     }
-
-    @Test
-    public void setKeyword
 }
