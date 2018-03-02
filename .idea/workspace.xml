@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7d9c0359-c60d-4a57-8e17-4d1af5619b63" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Quotes-Testing/test/searchByKeyword.java" afterPath="$PROJECT_DIR$/Quotes-Testing/test/searchByKeyword.java" />
-    </list>
+    <list default="true" id="7d9c0359-c60d-4a57-8e17-4d1af5619b63" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -379,13 +377,13 @@
     <history-entry file="searchByKeyword - 2018.03.01 at 19h 02m 06s.xml">
       <configuration name="searchByKeyword" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="searchByKeyword_keywordSearchTest_2 - 2018.03.01 at 18h 35m 55s.xml">
-      <configuration name="searchByKeyword.keywordSearchTest_2" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="searchByKeyword_keywordSearchTest_2 - 2018.03.01 at 18h 39m 33s.xml">
       <configuration name="searchByKeyword.keywordSearchTest_2" configurationId="JUnit" />
     </history-entry>
     <history-entry file="searchByKeyword_keywordSearchTest_2 - 2018.03.01 at 18h 41m 53s.xml">
+      <configuration name="searchByKeyword.keywordSearchTest_2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="searchByKeyword_keywordSearchTest_2 - 2018.03.01 at 19h 16m 54s.xml">
       <configuration name="searchByKeyword.keywordSearchTest_2" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -400,7 +398,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27459955" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27459955" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
