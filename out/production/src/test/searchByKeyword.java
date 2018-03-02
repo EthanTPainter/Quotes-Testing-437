@@ -1,4 +1,4 @@
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 
@@ -10,7 +10,7 @@ public class searchByKeyword {
     private static QuoteList quoteList;
     private static QuoteList keywordResult;
 
-    @BeforeAll
+    @BeforeEach
     public static void setUp(){
         //set up quoteLists
         quoteList = new QuoteList();
