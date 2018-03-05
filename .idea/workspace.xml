@@ -2,11 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d9c0359-c60d-4a57-8e17-4d1af5619b63" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Quotes-Testing/src/Quote.class" afterPath="$PROJECT_DIR$/Quotes-Testing/src/Quote.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Quotes-Testing/src/QuoteCMD.class" afterPath="$PROJECT_DIR$/Quotes-Testing/src/QuoteCMD.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Quotes-Testing/src/QuoteList.class" afterPath="$PROJECT_DIR$/Quotes-Testing/src/QuoteList.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Quotes-Testing/src/QuoteSaxHandler.class" afterPath="$PROJECT_DIR$/Quotes-Testing/src/QuoteSaxHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Quotes-Testing/src/QuoteSaxParser.class" afterPath="$PROJECT_DIR$/Quotes-Testing/src/QuoteSaxParser.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/src/QuoteCMD.class" afterPath="$PROJECT_DIR$/out/production/src/QuoteCMD.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/src/QuoteList.class" afterPath="$PROJECT_DIR$/out/production/src/QuoteList.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/src/src/Quote.class" afterPath="$PROJECT_DIR$/out/production/src/src/Quote.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/src/src/QuoteCMD.class" afterPath="$PROJECT_DIR$/out/production/src/src/QuoteCMD.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/src/src/QuoteList.class" afterPath="$PROJECT_DIR$/out/production/src/src/QuoteList.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/src/src/QuoteSaxHandler.class" afterPath="$PROJECT_DIR$/out/production/src/src/QuoteSaxHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/src/src/QuoteSaxParser.class" afterPath="$PROJECT_DIR$/out/production/src/src/QuoteSaxParser.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/src/searchByKeyword.class" afterPath="$PROJECT_DIR$/out/test/src/searchByKeyword.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Quotes-Testing/src.iml" afterPath="$PROJECT_DIR$/Quotes-Testing/src.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Quotes-Testing/src/QuoteCMD.java" afterPath="$PROJECT_DIR$/Quotes-Testing/src/QuoteCMD.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Quotes-Testing/src/QuoteList.java" afterPath="$PROJECT_DIR$/Quotes-Testing/src/QuoteList.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Quotes-Testing/test/searchByKeyword.java" afterPath="$PROJECT_DIR$/Quotes-Testing/test/searchByKeyword.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/src/src/QuoteCMD.java" afterPath="$PROJECT_DIR$/out/production/src/src/QuoteCMD.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/src/src/QuoteList.java" afterPath="$PROJECT_DIR$/out/production/src/src/QuoteList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/src/test/searchByKeyword.java" afterPath="$PROJECT_DIR$/out/production/src/test/searchByKeyword.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,8 +35,8 @@
       <file leaf-file-name="searchByKeyword.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Quotes-Testing/test/searchByKeyword.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="62">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -29,28 +44,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QuoteList.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Quotes-Testing/src/QuoteList.java">
+      <file leaf-file-name="QuoteCMD.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Quotes-Testing/src/QuoteCMD.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="123" column="0" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
-              <folding>
-                <element signature="e#848#849#0" expanded="true" />
-                <element signature="e#879#880#0" expanded="true" />
-                <element signature="e#946#947#0" expanded="true" />
-                <element signature="e#983#984#0" expanded="true" />
-                <element signature="e#1064#1065#0" expanded="true" />
-                <element signature="e#1110#1111#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="595">
+              <caret line="110" column="26" lean-forward="true" selection-start-line="110" selection-start-column="26" selection-end-line="110" selection-end-column="26" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Quote.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Quotes-Testing/src/Quote.java">
+      <file leaf-file-name="quotes.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Quotes-Testing/src/quotes.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+            <state relative-caret-position="867">
+              <caret line="51" column="89" lean-forward="false" selection-start-line="51" selection-start-column="86" selection-end-line="51" selection-end-column="89" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QuoteList.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Quotes-Testing/src/QuoteList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="21" column="37" lean-forward="true" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -64,6 +82,12 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>realize</find>
+      <find>you</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -79,8 +103,8 @@
         <option value="$PROJECT_DIR$/QuoteCMD.java" />
         <option value="$PROJECT_DIR$/quotes.xml" />
         <option value="$PROJECT_DIR$/QuoteList.java" />
-        <option value="$PROJECT_DIR$/Quotes-Testing/src/QuoteCMD.java" />
         <option value="$PROJECT_DIR$/Quotes-Testing/src/QuoteList.java" />
+        <option value="$PROJECT_DIR$/Quotes-Testing/src/QuoteCMD.java" />
         <option value="$PROJECT_DIR$/Quotes-Testing/test/searchByKeyword.java" />
       </list>
     </option>
@@ -108,6 +132,7 @@
     <panes>
       <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -129,7 +154,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -376,8 +400,8 @@
     <recent_temporary>
       <list size="4">
         <item index="0" class="java.lang.String" itemvalue="JUnit.searchByKeyword" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.searchByKeyword.keywordSearchTest_2" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.searchByKeyword.keywordSearchTest_1" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.searchByKeyword.keywordSearchTest_1" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.searchByKeyword.keywordSearchTest_2" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.searchByKeyword.keywordSearchTest_4" />
       </list>
     </recent_temporary>
@@ -396,16 +420,13 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="searchByKeyword - 2018.03.04 at 20h 08m 54s.xml">
+    <history-entry file="searchByKeyword - 2018.03.05 at 14h 30m 35s.xml">
       <configuration name="searchByKeyword" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="searchByKeyword - 2018.03.04 at 20h 09m 16s.xml">
+    <history-entry file="searchByKeyword - 2018.03.05 at 14h 49m 32s.xml">
       <configuration name="searchByKeyword" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="searchByKeyword - 2018.03.04 at 20h 39m 55s.xml">
-      <configuration name="searchByKeyword" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="searchByKeyword - 2018.03.04 at 20h 48m 09s.xml">
+    <history-entry file="searchByKeyword - 2018.03.05 at 14h 50m 24s.xml">
       <configuration name="searchByKeyword" configurationId="JUnit" />
     </history-entry>
     <history-entry file="searchByKeyword_keywordSearchTest_1 - 2018.03.04 at 20h 35m 24s.xml">
@@ -415,6 +436,9 @@
       <configuration name="searchByKeyword.keywordSearchTest_1" configurationId="JUnit" />
     </history-entry>
     <history-entry file="searchByKeyword_keywordSearchTest_1 - 2018.03.04 at 20h 38m 41s.xml">
+      <configuration name="searchByKeyword.keywordSearchTest_1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="searchByKeyword_keywordSearchTest_1 - 2018.03.05 at 14h 50m 19s.xml">
       <configuration name="searchByKeyword.keywordSearchTest_1" configurationId="JUnit" />
     </history-entry>
     <history-entry file="searchByKeyword_keywordSearchTest_2 - 2018.03.04 at 20h 39m 51s.xml">
@@ -439,12 +463,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33615223" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3181818" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1421875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12083333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -504,7 +528,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/deploy" />
     <entry file="file://$PROJECT_DIR$/Quote.java" />
     <entry file="file://$PROJECT_DIR$/QuoteList.java" />
     <entry file="file://$PROJECT_DIR$/QuoteSaxParser.java" />
@@ -540,14 +563,6 @@
     <entry file="file://$PROJECT_DIR$/Quote.java" />
     <entry file="file://$PROJECT_DIR$/QuoteList.java" />
     <entry file="file://$PROJECT_DIR$/Quotes-Testing/src/deploy" />
-    <entry file="file://$PROJECT_DIR$/Quotes-Testing/src/QuoteCMD.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="47" column="15" lean-forward="false" selection-start-line="47" selection-start-column="15" selection-end-line="47" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Quotes-Testing/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -567,9 +582,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#664#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -577,7 +589,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="16" column="9" lean-forward="false" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -585,9 +596,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#443#444#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -595,9 +603,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <element signature="e#893#894#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -606,7 +611,7 @@
         <state relative-caret-position="130">
           <caret line="1610" column="0" lean-forward="false" selection-start-line="1610" selection-start-column="0" selection-end-line="1610" selection-end-column="0" />
           <folding>
-            <element signature="e#62916#62917#0" expanded="true" />
+            <element signature="e#62916#62917#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -615,7 +620,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
           <caret line="178" column="0" lean-forward="false" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -623,7 +627,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
           <caret line="487" column="0" lean-forward="false" selection-start-line="487" selection-start-column="0" selection-end-line="487" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -631,7 +634,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
           <caret line="203" column="0" lean-forward="false" selection-start-line="203" selection-start-column="0" selection-end-line="203" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -640,9 +642,9 @@
         <state relative-caret-position="123">
           <caret line="1387" column="0" lean-forward="false" selection-start-line="1387" selection-start-column="0" selection-end-line="1387" selection-end-column="0" />
           <folding>
-            <element signature="e#46390#46391#0" expanded="true" />
-            <element signature="e#46455#46456#0" expanded="true" />
-            <element signature="e#51690#51691#0" expanded="true" />
+            <element signature="e#46390#46391#0" expanded="false" />
+            <element signature="e#46455#46456#0" expanded="false" />
+            <element signature="e#51690#51691#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -651,7 +653,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
           <caret line="739" column="0" lean-forward="false" selection-start-line="739" selection-start-column="0" selection-end-line="739" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -667,7 +668,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
           <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -675,7 +675,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="190" column="0" lean-forward="false" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -683,7 +682,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
           <caret line="562" column="0" lean-forward="false" selection-start-line="562" selection-start-column="0" selection-end-line="562" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -691,7 +689,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -699,9 +696,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
           <caret line="580" column="0" lean-forward="false" selection-start-line="580" selection-start-column="0" selection-end-line="580" selection-end-column="0" />
-          <folding>
-            <element signature="e#27022#27023#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -709,7 +703,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -717,9 +710,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
           <caret line="269" column="0" lean-forward="false" selection-start-line="269" selection-start-column="0" selection-end-line="269" selection-end-column="0" />
-          <folding>
-            <element signature="e#11384#11385#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -727,9 +717,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
           <caret line="1093" column="0" lean-forward="false" selection-start-line="1093" selection-start-column="0" selection-end-line="1093" selection-end-column="0" />
-          <folding>
-            <element signature="e#45974#45975#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -737,7 +724,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -745,39 +731,45 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
           <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding>
-            <element signature="e#1244#1245#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Quotes-Testing/src/Quote.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
+        <state relative-caret-position="731">
           <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Quotes-Testing/src/quotes.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="51" column="89" lean-forward="false" selection-start-line="51" selection-start-column="86" selection-end-line="51" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Quotes-Testing/src/QuoteCMD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="110" column="26" lean-forward="true" selection-start-line="110" selection-start-column="26" selection-end-line="110" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Quotes-Testing/src/QuoteList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="123" column="0" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
-          <folding>
-            <element signature="e#848#849#0" expanded="true" />
-            <element signature="e#879#880#0" expanded="true" />
-            <element signature="e#946#947#0" expanded="true" />
-            <element signature="e#983#984#0" expanded="true" />
-            <element signature="e#1064#1065#0" expanded="true" />
-            <element signature="e#1110#1111#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="136">
+          <caret line="21" column="37" lean-forward="true" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Quotes-Testing/test/searchByKeyword.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="62">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

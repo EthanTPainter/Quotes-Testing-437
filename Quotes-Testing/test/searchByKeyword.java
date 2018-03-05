@@ -26,7 +26,7 @@ public class searchByKeyword {
         String result = quoteList.searchByKeyword("technology is fun", quoteList);
 
         assertTrue(result.contains(keyword));
-        assertTrue(result.equals(quoteList.getQuote(0).toString()));
+        assertTrue(result.equals(quoteList.getQuote(0).toString()+"\n"));
     }
 
     @Test

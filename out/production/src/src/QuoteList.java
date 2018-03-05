@@ -116,7 +116,7 @@ public class QuoteList
       }
       String outputString = "";
       for(int i = 0; i < outputQuoteList.getSize();i++){
-         outputString += outputQuoteList.getQuote(i).toString();
+         outputString += outputQuoteList.getQuote(i).toString() + "\n";
       }//No found quotes
       if(outputQuoteList.getSize() == 0){
          return "No quotes found with keyword: "+ input;

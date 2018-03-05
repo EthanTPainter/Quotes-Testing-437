@@ -46,9 +46,9 @@ public class QuoteCMD{
     private BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
     //Quote SAXParser to Parse XML Files
-    //private QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:\\Users\\EthanPC\\Desktop\\GMU\\Quotes-Testing-437\\quotes.xml");         //ETHAN DESKTOP
+    private QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:\\Users\\EthanPC\\Desktop\\GMU\\Quotes-Testing-437\\Quotes-Testing\\src\\quotes.xml");         //ETHAN DESKTOP
     //private QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:\\Users\\jedwa\\Documents\\GMU\\2018_spring\\cs437_softwareTesting\\Quotes-Testing-437\\quotes.xml");    //JAMES LAPTOP
-    private QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:\\Users\\Ethan\\Desktop\\GMU\\2018 Spring Classes\\Quotes-Testing-437\\quotes.xml");  //ETHAN LAPTOP
+    //private QuoteSaxParser quoteSaxParser = new QuoteSaxParser("C:\\Users\\EthanPC\\Desktop\\GMU\\Quotes-Testing-437\\Quotes-Testing\\src\\quotes.xml");                  //ETHAN LAPTOP
     //Quote SAParser to Parse XML Files
     private QuoteList quoteList = quoteSaxParser.getQuoteList();
 
@@ -57,10 +57,11 @@ public class QuoteCMD{
         return quoteList;
     }
 
+    //Getter for buffered reader
+    public BufferedReader getBr() { return br; }
+
     //Closes buffered reader br when quitting
-    public void closeBufferedReader() throws IOException {
-        br.close();
-    }
+    public void closeBufferedReader() throws IOException { br.close(); }
 
     //Getters and Setters for Entered Quote Text and Author
     //Again, only relevant to use during changing XML (adding quotes)
@@ -79,8 +80,7 @@ public class QuoteCMD{
 
 
     //Added "throws IOException" because of Buffered Reader
-    public static void main(String[] args) throws IOException
-    {
+    public static void main(String[] args) throws IOException, NoSuchFieldException {
         //Make QuoteCMD runner to use methods included
         QuoteCMD runner = new QuoteCMD();
         int loopValue = -1;
@@ -93,12 +93,13 @@ public class QuoteCMD{
             //Show Recent Searches (Just User Searches)
             System.out.println("MENU");
             System.out.println("0) Quit");
-            System.out.println("1) Search For Existing Quote");
-            System.out.println("2) Search For Existing Author");
-            System.out.println("3) Search For Either Existing Quote or Author");
-            System.out.println("4) Add quote to current quote list");
-            System.out.println("5) Generate a Random Quote");
-            System.out.println("6) Print last 5 Search Terms");
+            System.out.println("1) Search Using a Keyword");
+            System.out.println("2) Search For Existing Quote");
+            System.out.println("3) Search For Existing Author");
+            System.out.println("4) Search For Either Existing Quote or Author");
+            System.out.println("5) Add quote to current quote list");
+            System.out.println("6) Generate a Random Quote");
+            System.out.println("7) Print last 5 Search Terms");
             loopValue = Integer.parseInt(sample.readLine());
             //Loop through loop with input
             switch(loopValue){
@@ -109,18 +110,24 @@ public class QuoteCMD{
                     System.out.println("\nQuitting...");
                     break;
                 case 1:
+                    System.out.println("\nEnter term(s) to search for in a quote: ");
+                    String searchTerm = (runner.getBr()).readLine();
+                    String output = (runner.getQuoteList()).searchByKeyword(searchTerm, runner.getQuoteList());
+                    System.out.println(output);
+                    break;
+                case 2:
                     //Mode = 1
                     runner.searchQuotes(1);
                     break;
-                case 2:
+                case 3:
                     //Mode = 0
                     runner.searchQuotes(0);
                     break;
-                case 3:
+                case 4:
                     //Mode = 2
                     runner.searchQuotes(2);
                     break;
-                case 4:
+                case 5:
                     String newQuoteText;
                     String newAuthor;
                     BufferedReader newBR = new BufferedReader(new InputStreamReader(System.in));
@@ -155,11 +162,11 @@ public class QuoteCMD{
                         System.out.println("\nError: Quote text provided is empty (No quote provided)\n");
                     }
                     break;
-                case 5:
+                case 6:
                     //Generate a random quote
                     runner.generateRandomQuote();
                     break;
-                case 6:
+                case 7:
                     //Print last 5 Search Terms
                     runner.printLastFiveSearchTerms();
                     break;
